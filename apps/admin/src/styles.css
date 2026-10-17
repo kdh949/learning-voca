@@ -1,0 +1,25 @@
+/* Figma의 각 앱 Semantic 변수와 Type 스타일 중 이 화면에서 사용하는 값만 유지한다. */
+:root {
+  font-family: 'Noto Sans KR Variable', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-synthesis: none;
+  --color-background: #f4f6f9;
+  --color-surface: #fff;
+  --color-text: #202638;
+  --color-muted: #596477;
+  --color-border: #d6dee9;
+  --color-primary: #1f65c9;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+main { width: min(100%, 504px); margin: 10vh auto; padding: 32px; }
+p, h1 { margin: 0; }
+.brand { font-family: 'Nunito Sans Variable', sans-serif; font-size: 24px; line-height: 32px; font-weight: 800; margin-bottom: 24px; }
+section { display: grid; gap: 20px; padding: 32px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 0px; }
+h1 { font-size: 24px; line-height: 34px; font-weight: 700; }
+.label { color: var(--color-primary); font-size: 14px; line-height: 20px; font-weight: 500; }
+.muted { color: var(--color-muted); }

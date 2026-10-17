@@ -1,0 +1,21 @@
+{
+  "name": "learning-voca",
+  "private": true,
+  "packageManager": "pnpm@10.34.6",
+  "engines": {
+    "node": ">=24.21.0 <25"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter './apps/*' run dev",
+    "dev:web": "pnpm --filter @learning-voca/web dev",
+    "dev:admin": "pnpm --filter @learning-voca/admin dev",
+    "dev:api": "pnpm --filter @learning-voca/api dev",
+    "typecheck": "pnpm --filter @learning-voca/contracts build && pnpm -r typecheck",
+    "build": "pnpm -r build",
+    "db:up": "docker compose --env-file infra/.env -f infra/compose.yaml up -d --wait",
+    "db:down": "docker compose --env-file infra/.env -f infra/compose.yaml down"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}
