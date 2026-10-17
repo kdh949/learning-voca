@@ -1,0 +1,111 @@
+{
+  "description": "명시적 검증 설정이다. 제품 기본 설정으로 확정하지 않았다. 고정 버전의 짧은 학습·장기 복습·재학습 결과를 보존한다.",
+  "config": {
+    "id": "90000000-0000-4000-8000-000000000001",
+    "libraryVersion": "5.4.2",
+    "policyVersion": "fsrs-review-v1",
+    "parameters": {
+      "request_retention": 0.9,
+      "maximum_interval": 36500,
+      "w": [
+        0.212,
+        1.2931,
+        2.3065,
+        8.2956,
+        6.4133,
+        0.8334,
+        3.0194,
+        0.001,
+        1.8722,
+        0.1666,
+        0.796,
+        1.4835,
+        0.0614,
+        0.2629,
+        1.6483,
+        0.6014,
+        1.8729,
+        0.5425,
+        0.0912,
+        0.0658,
+        0.1542
+      ],
+      "enable_fuzz": false,
+      "enable_short_term": true,
+      "learning_steps": [
+        "1m",
+        "10m"
+      ],
+      "relearning_steps": [
+        "10m"
+      ]
+    },
+    "configHash": "04d22bf8aab4a52ead64ea028f11b25d3002369631245f804f74f3eeb339dbef"
+  },
+  "steps": [
+    {
+      "rating": "Again",
+      "effectiveAt": "2026-10-09T00:00:00Z",
+      "expected": {
+        "due": "2026-10-09T00:01:00.000Z",
+        "lastReview": "2026-10-09T00:00:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "reps": 1,
+        "lapses": 0,
+        "state": "Learning",
+        "learningSteps": 0
+      }
+    },
+    {
+      "rating": "Good",
+      "effectiveAt": "2026-10-09T00:01:00Z",
+      "expected": {
+        "due": "2026-10-09T00:11:00.000Z",
+        "lastReview": "2026-10-09T00:01:00.000Z",
+        "stability": 0.24668919,
+        "difficulty": 6.40211507,
+        "elapsedDays": 0,
+        "scheduledDays": 0,
+        "reps": 2,
+        "lapses": 0,
+        "state": "Learning",
+        "learningSteps": 1
+      }
+    },
+    {
+      "rating": "Good",
+      "effectiveAt": "2026-10-09T00:11:00Z",
+      "expected": {
+        "due": "2026-10-10T00:11:00.000Z",
+        "lastReview": "2026-10-09T00:11:00.000Z",
+        "stability": 0.28420636,
+        "difficulty": 6.39094132,
+        "elapsedDays": 0,
+        "scheduledDays": 1,
+        "reps": 3,
+        "lapses": 0,
+        "state": "Review",
+        "learningSteps": 0
+      }
+    },
+    {
+      "rating": "Again",
+      "effectiveAt": "2026-10-11T00:11:00Z",
+      "expected": {
+        "due": "2026-10-11T00:21:00.000Z",
+        "lastReview": "2026-10-11T00:11:00.000Z",
+        "stability": 0.14109523,
+        "difficulty": 8.79895532,
+        "elapsedDays": 2,
+        "scheduledDays": 0,
+        "reps": 4,
+        "lapses": 1,
+        "state": "Relearning",
+        "learningSteps": 0
+      }
+    }
+  ]
+}

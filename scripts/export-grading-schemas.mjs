@@ -7,6 +7,9 @@ const names = [
   'GradingAnswer', 'GradingRuleInput', 'GradingRule', 'TranslationSegment',
   'ExampleRevision', 'SenseRevision', 'GradingResult', 'FirstAttempt', 'PracticeAttempt',
   'HintRevealedEvent', 'AnswerSubmittedEvent', 'AnswerGivenUpEvent', 'PracticeSubmittedEvent',
+  'ContentSelection', 'DeckItem', 'DeckRevision', 'PackageCandidate', 'CardState', 'FsrsParameters',
+  'SchedulerConfig', 'ProgressCheckpoint', 'SessionSettings', 'SessionItemSeed', 'SessionItem',
+  'ItemAdvancedEvent', 'ItemSkippedEvent', 'SessionCompletedEvent',
 ];
 
 // 스키마를 따로 수작업 복제하지 않고 실제 런타임 검증 정의에서 검사 자료를 얻는다.

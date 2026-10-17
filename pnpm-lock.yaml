@@ -119,6 +119,9 @@ importers:
       '@learning-voca/contracts':
         specifier: workspace:*
         version: link:../contracts
+      ts-fsrs:
+        specifier: 5.4.2
+        version: 5.4.2
 
 packages:
 

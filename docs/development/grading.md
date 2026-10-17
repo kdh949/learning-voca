@@ -1,6 +1,6 @@
 # 채점 계약과 순수 규칙
 
-첫 착수 작업 2의 범위다. `contracts`는 전송·콘텐츠·기록의 구조를 검증하고 타입을 제공하며, `learning-core`는 같은 판정 로직을 브라우저와 Node에서 실행한다. DB 저장·인증·제품 API·화면은 아직 연결하지 않았다.
+첫 착수 작업 2의 범위다. `contracts`는 전송·콘텐츠·기록의 구조를 검증하고 타입을 제공하며, `learning-core`는 같은 판정 로직을 브라우저와 Node에서 실행한다. 이후 순수 상태 전이·최초/재연습 분리·복습 매핑은 [세션·복습 개발 안내](./session-and-review.md)에 구현했다. DB 저장·인증·제품 API·화면은 아직 연결하지 않았다.
 
 ## 호출 경계
 
@@ -23,11 +23,11 @@ const result = gradeAnswer(example.gradingRule, rawAnswer, storedHintUsed);
 - 힌트 없는 목표 답은 `Good`, 힌트 사용 목표 답·형태 오류·오답은 `Again`, 대체 표현은 rating 없이 평가를 보류한다. `scheduleEffect`는 적용 정책이며 실제 DB·FSRS 일정 반영을 뜻하지 않는다.
 - 알 수 없는 버전은 현재 규칙으로 대체하지 않고 `GradingError.code`로 거절한다. 같은 버전의 동작을 바꾸지 않으며 향후 변경은 새 버전을 추가한다.
 
-`gradeAnswer`의 빈 답은 `EMPTY_ANSWER`다. 모르겠어요는 `answer.given_up`으로 구분하며 `FirstAttempt`에 원문·정규화 답의 `null`을 보존한다. 해당 이벤트의 최초 시도 생성·복습 매핑은 후속 순수 세션 reducer에서 처리하며 실제 저장은 이후 DB 작업 범위다.
+`gradeAnswer`의 빈 답은 `EMPTY_ANSWER`다. 모르겠어요는 `answer.given_up`으로 구분하며 `FirstAttempt`에 원문·정규화 답의 `null`을 보존한다. 해당 이벤트의 최초 시도 생성·복습 매핑은 순수 세션 reducer에서 처리하며 실제 저장은 이후 DB 작업 범위다.
 
 `getHint`는 이 규칙 버전에서 목표 답 첫 글자만 반환한다. 힌트 이벤트를 저장하기 전에 사용자에게 공개하면 안 되며 이 순수 함수 자체는 저장·공개를 수행하지 않는다.
 
-`getPracticeFeedback`은 목표 답·동등 표기·대체 표현의 접두사를 인정한다. 목표 답·동등 표기에 도달해야 `targetCompleted=true`이며 대체 표현 입력은 목표 재연습 완료가 아니다. `postpone`는 `postponed`의 입력 중 접두사이므로 제출 전에 형태 오류를 확정하지 않는다. IME 조합 중에는 완료·오류를 확정하지 않는다. 입력을 삭제하거나 다음 문항으로 이동하지 않으며 rating·최초 평가 값을 반환하지 않는다. 후속 순수 reducer가 최초/재연습 상태를 분리하며 저장의 유일성은 이후 DB 작업에서 강제한다.
+`getPracticeFeedback`은 목표 답·동등 표기·대체 표현의 접두사를 인정한다. 목표 답·동등 표기에 도달해야 `targetCompleted=true`이며 대체 표현 입력은 목표 재연습 완료가 아니다. `postpone`는 `postponed`의 입력 중 접두사이므로 제출 전에 형태 오류를 확정하지 않는다. IME 조합 중에는 완료·오류를 확정하지 않는다. 입력을 삭제하거나 다음 문항으로 이동하지 않으며 rating·최초 평가 값을 반환하지 않는다. 순수 reducer가 최초/재연습 상태를 분리하며 저장의 유일성은 이후 DB 작업에서 강제한다.
 
 ## 검증 데이터와 실행
 

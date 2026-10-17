@@ -1,6 +1,6 @@
 # learning-voca
 
-영단어 학습 앱, 관리자·운영팀 앱, NestJS API의 개발 기반과 공통 채점·힌트·재연습 규칙을 구현했다. 학습·인증·콘텐츠·동기화의 화면·제품 API와 DB 테이블은 아직 구현 전이다.
+영단어 학습 앱, 관리자·운영팀 앱, NestJS API의 개발 기반과 공통 채점·세션·출제·복습 규칙을 구현했다. 학습·인증·콘텐츠·동기화의 화면·제품 API와 DB 테이블은 아직 구현 전이다.
 
 ## 준비와 실행
 
@@ -56,7 +56,7 @@ pnpm test
 pnpm check:contracts
 ```
 
-`pnpm test`는 공통 패키지 빌드·Node 단위 테스트·실제 Chromium과 Node의 결과 비교를 수행한다. `check:contracts`는 빌드한 Zod schema와 OpenAPI의 학습 계약을 비교하며 위 Python 검증 환경을 사용한다. 세부 규칙·검증 범위는 [채점 개발 안내](docs/development/grading.md)를 따른다. CI는 frozen 설치·typecheck·build·단위·브라우저 비교·OpenAPI 구조 및 학습 계약 검사를 수행한다.
+`pnpm test`는 공통 패키지 빌드·Node 단위 테스트·실제 Chromium과 Node의 결과 비교를 수행한다. `check:contracts`는 빌드한 Zod schema와 OpenAPI의 학습 계약을 비교하며 위 Python 검증 환경을 사용한다. 세부 규칙·검증 범위는 [채점 개발 안내](docs/development/grading.md)와 [세션·복습 개발 안내](docs/development/session-and-review.md)를 따른다. CI는 frozen 설치·typecheck·build·단위·브라우저 비교·OpenAPI 구조 및 학습 계약 검사를 수행한다.
 
 ## 로컬 DB
 
@@ -73,6 +73,6 @@ pnpm db:down
 
 ## 구조와 다음 범위
 
-`apps/web`과 `apps/admin`은 각각 React + Vite, `apps/api`는 NestJS다. `packages/contracts`는 Zod 4.6.5의 학습 schema와 타입, `packages/learning-core`는 정규화·채점·힌트·재연습을 제공한다. 브라우저 비교에만 Playwright 1.64.0을 사용한다. 앱에 사용처 없는 의존 연결은 추가하지 않았다.
+`apps/web`과 `apps/admin`은 각각 React + Vite, `apps/api`는 NestJS다. `packages/contracts`는 Zod 4.6.5의 학습 schema와 타입, `packages/learning-core`는 정규화·채점·힌트·재연습·세션 상태·선택·통계와 ts-fsrs 5.4.2의 복습 계산을 제공한다. 브라우저 비교에만 Playwright 1.64.0을 사용한다. 앱에 사용처 없는 의존 연결은 추가하지 않았다.
 
-공유 개발 안내와 CI는 로컬 전용 디자인·로드맵·다이어그램에 의존하지 않는다. 기존 `.git/info/exclude`는 보존한다. 다음 작업은 순수 세션 상태 전이·출제·복습 계산이다.
+공유 개발 안내와 CI는 로컬 전용 디자인·로드맵·다이어그램에 의존하지 않는다. 기존 `.git/info/exclude`는 보존한다. 다음 작업은 실제 PostgreSQL의 최소 migration·서버 이벤트 수신·재채점·중복 방지·진도 transaction이다.
