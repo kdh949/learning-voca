@@ -12,10 +12,18 @@
     "dev:api": "pnpm --filter @learning-voca/api dev",
     "typecheck": "pnpm --filter @learning-voca/contracts build && pnpm -r typecheck",
     "build": "pnpm -r build",
+    "test": "pnpm --filter @learning-voca/learning-core... build && pnpm test:unit && pnpm test:browser",
+    "test:unit": "node --test packages/*/test/*.test.mjs",
+    "test:browser": "playwright test",
+    "check:contracts": "python3 docs/tools/check_grading_contracts.py",
+    "check:openapi": "python3 docs/tools/validate_openapi.py",
     "db:up": "docker compose --env-file infra/.env -f infra/compose.yaml up -d --wait",
     "db:down": "docker compose --env-file infra/.env -f infra/compose.yaml down"
   },
   "devDependencies": {
+    "@learning-voca/contracts": "workspace:*",
+    "@learning-voca/learning-core": "workspace:*",
+    "@playwright/test": "1.64.0",
     "typescript": "5.9.3"
   }
 }

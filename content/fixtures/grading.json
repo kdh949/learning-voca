@@ -1,0 +1,303 @@
+[
+  {
+    "id": "00000000-0000-4000-8000-000000000101",
+    "senseId": "00000000-0000-4000-8000-000000000100",
+    "version": 1,
+    "status": "published",
+    "rowVersion": 1,
+    "etag": "\"1\"",
+    "expressionText": "postpone",
+    "meaningKo": "연기하다",
+    "partOfSpeech": "verb",
+    "usageNote": "검증용 데이터이며 실제 게시 콘텐츠가 아니다.",
+    "difficulty": 1,
+    "source": "learning-voca 자체 제작 검증 fixture",
+    "usageTerms": "본 프로젝트의 검증 데이터로 사용",
+    "examples": [
+      {
+        "id": "00000000-0000-4000-8000-000000000103",
+        "exampleId": "00000000-0000-4000-8000-000000000102",
+        "senseRevisionId": "00000000-0000-4000-8000-000000000101",
+        "sentenceTemplate": "They {answer} the meeting until next week.",
+        "translationSegments": [
+          {
+            "text": "그들은 회의를 다음 주로 ",
+            "emphasis": false
+          },
+          {
+            "text": "미뤘다",
+            "emphasis": true
+          },
+          {
+            "text": ".",
+            "emphasis": false
+          }
+        ],
+        "explanation": "직접 작성한 검증 예문이며 외부 콘텐츠를 전재하지 않았다.",
+        "difficulty": 1,
+        "source": "learning-voca 자체 제작 검증 fixture",
+        "usageTerms": "본 프로젝트의 검증 데이터로 사용",
+        "ordinal": 0,
+        "gradingRule": {
+          "id": "00000000-0000-4000-8000-000000000104",
+          "targetAnswer": "postponed",
+          "normalizationVersion": "nfkc-space-case-v1",
+          "gradingEngineVersion": "exact-answers-v1",
+          "hintText": "p",
+          "answers": [
+            {
+              "kind": "valid_alternative",
+              "answerText": "delayed",
+              "feedback": "문맥에 맞는 표현이에요. 목표 표현 postponed도 확인해 주세요."
+            },
+            {
+              "kind": "valid_alternative",
+              "answerText": "put off"
+            },
+            {
+              "kind": "known_form_error",
+              "answerText": "postpone",
+              "feedback": "지난 일이므로 과거형 postponed가 필요해요."
+            }
+          ]
+        },
+        "topicIds": []
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000201",
+    "senseId": "00000000-0000-4000-8000-000000000200",
+    "version": 1,
+    "status": "published",
+    "rowVersion": 1,
+    "etag": "\"1\"",
+    "expressionText": "book",
+    "meaningKo": "책",
+    "partOfSpeech": "noun",
+    "usageNote": "검증용 데이터이며 실제 게시 콘텐츠가 아니다.",
+    "difficulty": 1,
+    "source": "learning-voca 자체 제작 검증 fixture",
+    "usageTerms": "본 프로젝트의 검증 데이터로 사용",
+    "examples": [
+      {
+        "id": "00000000-0000-4000-8000-000000000203",
+        "exampleId": "00000000-0000-4000-8000-000000000202",
+        "senseRevisionId": "00000000-0000-4000-8000-000000000201",
+        "sentenceTemplate": "I borrowed a {answer} from the library.",
+        "translationSegments": [
+          {
+            "text": "나는 도서관에서 책 한 권을 빌렸다.",
+            "emphasis": false
+          }
+        ],
+        "explanation": "직접 작성한 검증 예문이며 외부 콘텐츠를 전재하지 않았다.",
+        "difficulty": 1,
+        "source": "learning-voca 자체 제작 검증 fixture",
+        "usageTerms": "본 프로젝트의 검증 데이터로 사용",
+        "ordinal": 0,
+        "gradingRule": {
+          "id": "00000000-0000-4000-8000-000000000204",
+          "targetAnswer": "book",
+          "normalizationVersion": "nfkc-space-case-v1",
+          "gradingEngineVersion": "exact-answers-v1",
+          "hintText": "b",
+          "answers": [
+            {
+              "kind": "known_form_error",
+              "answerText": "books",
+              "feedback": "a 뒤에는 단수형 book이 필요해요."
+            }
+          ]
+        },
+        "topicIds": []
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000301",
+    "senseId": "00000000-0000-4000-8000-000000000300",
+    "version": 1,
+    "status": "published",
+    "rowVersion": 1,
+    "etag": "\"1\"",
+    "expressionText": "book",
+    "meaningKo": "예약하다",
+    "partOfSpeech": "verb",
+    "usageNote": "검증용 데이터이며 실제 게시 콘텐츠가 아니다.",
+    "difficulty": 1,
+    "source": "learning-voca 자체 제작 검증 fixture",
+    "usageTerms": "본 프로젝트의 검증 데이터로 사용",
+    "examples": [
+      {
+        "id": "00000000-0000-4000-8000-000000000303",
+        "exampleId": "00000000-0000-4000-8000-000000000302",
+        "senseRevisionId": "00000000-0000-4000-8000-000000000301",
+        "sentenceTemplate": "Please {answer} a table for two.",
+        "translationSegments": [
+          {
+            "text": "두 사람을 위한 자리를 예약해 주세요.",
+            "emphasis": false
+          }
+        ],
+        "explanation": "직접 작성한 검증 예문이며 외부 콘텐츠를 전재하지 않았다.",
+        "difficulty": 1,
+        "source": "learning-voca 자체 제작 검증 fixture",
+        "usageTerms": "본 프로젝트의 검증 데이터로 사용",
+        "ordinal": 0,
+        "gradingRule": {
+          "id": "00000000-0000-4000-8000-000000000304",
+          "targetAnswer": "book",
+          "normalizationVersion": "nfkc-space-case-v1",
+          "gradingEngineVersion": "exact-answers-v1",
+          "hintText": "b",
+          "answers": [
+            {
+              "kind": "valid_alternative",
+              "answerText": "reserve"
+            },
+            {
+              "kind": "known_form_error",
+              "answerText": "booked"
+            }
+          ]
+        },
+        "topicIds": []
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000401",
+    "senseId": "00000000-0000-4000-8000-000000000400",
+    "version": 1,
+    "status": "published",
+    "rowVersion": 1,
+    "etag": "\"1\"",
+    "expressionText": "put off",
+    "meaningKo": "미루다",
+    "partOfSpeech": "verb",
+    "usageNote": "검증용 데이터이며 실제 게시 콘텐츠가 아니다.",
+    "difficulty": 1,
+    "source": "learning-voca 자체 제작 검증 fixture",
+    "usageTerms": "본 프로젝트의 검증 데이터로 사용",
+    "examples": [
+      {
+        "id": "00000000-0000-4000-8000-000000000403",
+        "exampleId": "00000000-0000-4000-8000-000000000402",
+        "senseRevisionId": "00000000-0000-4000-8000-000000000401",
+        "sentenceTemplate": "We should {answer} the trip.",
+        "translationSegments": [
+          {
+            "text": "우리는 여행을 미뤄야 한다.",
+            "emphasis": false
+          }
+        ],
+        "explanation": "직접 작성한 검증 예문이며 외부 콘텐츠를 전재하지 않았다.",
+        "difficulty": 1,
+        "source": "learning-voca 자체 제작 검증 fixture",
+        "usageTerms": "본 프로젝트의 검증 데이터로 사용",
+        "ordinal": 0,
+        "gradingRule": {
+          "id": "00000000-0000-4000-8000-000000000404",
+          "targetAnswer": "put off",
+          "normalizationVersion": "nfkc-space-case-v1",
+          "gradingEngineVersion": "exact-answers-v1",
+          "hintText": "p",
+          "answers": []
+        },
+        "topicIds": []
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000501",
+    "senseId": "00000000-0000-4000-8000-000000000500",
+    "version": 1,
+    "status": "published",
+    "rowVersion": 1,
+    "etag": "\"1\"",
+    "expressionText": "don't",
+    "meaningKo": "하지 않는다",
+    "partOfSpeech": "verb",
+    "usageNote": "검증용 데이터이며 실제 게시 콘텐츠가 아니다.",
+    "difficulty": 1,
+    "source": "learning-voca 자체 제작 검증 fixture",
+    "usageTerms": "본 프로젝트의 검증 데이터로 사용",
+    "examples": [
+      {
+        "id": "00000000-0000-4000-8000-000000000503",
+        "exampleId": "00000000-0000-4000-8000-000000000502",
+        "senseRevisionId": "00000000-0000-4000-8000-000000000501",
+        "sentenceTemplate": "I {answer} know the answer.",
+        "translationSegments": [
+          {
+            "text": "나는 정답을 모른다.",
+            "emphasis": false
+          }
+        ],
+        "explanation": "직접 작성한 검증 예문이며 외부 콘텐츠를 전재하지 않았다.",
+        "difficulty": 1,
+        "source": "learning-voca 자체 제작 검증 fixture",
+        "usageTerms": "본 프로젝트의 검증 데이터로 사용",
+        "ordinal": 0,
+        "gradingRule": {
+          "id": "00000000-0000-4000-8000-000000000504",
+          "targetAnswer": "don't",
+          "normalizationVersion": "nfkc-space-case-v1",
+          "gradingEngineVersion": "exact-answers-v1",
+          "hintText": "d",
+          "answers": [
+            {
+              "kind": "target_equivalent",
+              "answerText": "don’t"
+            }
+          ]
+        },
+        "topicIds": []
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000601",
+    "senseId": "00000000-0000-4000-8000-000000000600",
+    "version": 1,
+    "status": "published",
+    "rowVersion": 1,
+    "etag": "\"1\"",
+    "expressionText": "check-in",
+    "meaningKo": "접수",
+    "partOfSpeech": "noun",
+    "usageNote": "검증용 데이터이며 실제 게시 콘텐츠가 아니다.",
+    "difficulty": 1,
+    "source": "learning-voca 자체 제작 검증 fixture",
+    "usageTerms": "본 프로젝트의 검증 데이터로 사용",
+    "examples": [
+      {
+        "id": "00000000-0000-4000-8000-000000000603",
+        "exampleId": "00000000-0000-4000-8000-000000000602",
+        "senseRevisionId": "00000000-0000-4000-8000-000000000601",
+        "sentenceTemplate": "The {answer} desk is over there.",
+        "translationSegments": [
+          {
+            "text": "접수 데스크는 저쪽에 있다.",
+            "emphasis": false
+          }
+        ],
+        "explanation": "직접 작성한 검증 예문이며 외부 콘텐츠를 전재하지 않았다.",
+        "difficulty": 1,
+        "source": "learning-voca 자체 제작 검증 fixture",
+        "usageTerms": "본 프로젝트의 검증 데이터로 사용",
+        "ordinal": 0,
+        "gradingRule": {
+          "id": "00000000-0000-4000-8000-000000000604",
+          "targetAnswer": "check-in",
+          "normalizationVersion": "nfkc-space-case-v1",
+          "gradingEngineVersion": "exact-answers-v1",
+          "hintText": "c",
+          "answers": []
+        },
+        "topicIds": []
+      }
+    ]
+  }
+]
